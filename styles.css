@@ -123,12 +123,13 @@ margin-right: 10px ;
 }
 
 #form {
-    width: 450px;
-
+    width: 100%;
+    max-width: 422px;
 }
 
 #email {
-    width: 422px;
+    width: 100%;
+    max-width: 422px;
     height: 24px;
     font-size: 1rem;
     font-weight: 400;
@@ -146,7 +147,8 @@ margin-right: 10px ;
 }
 
 #senha {
-    width: 422px;
+    width: 100%;
+    max-width: 422px;
     height: 24px;
     font-size: 1rem;
     font-weight: 400;
