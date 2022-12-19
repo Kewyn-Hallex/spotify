@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'spotify-circular';
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Book.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'spotify-circular';
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Bold.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'spotify-circular';
+    src: url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Black.woff2') format('woff2'), url('https://encore.scdn.co/1.2.3/CircularSpotify-UI-Latin-OS2v3-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    font-family: 'spotify-circular';
+}
+
+#botao_facebook {
+    width: 100%;
+    background-color: rgb(24, 119, 242);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 3px;
+    border: 1px solid #000000;
+    align-items: center;
+
+}
+
+#logo_facebook {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+}
+
+
+#cabecalho {
+    height: 74px;
+    margin-bottom: 30px;
+    padding: 25px 0px 10px;
+    border-bottom: 1px solid #d9dadc;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+#informativo_faca_login {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bolder;
+
+
+}
+
+#logo {
+    height: 56px;
+
+}
+
+
+#form {
+    width: 450px;
+
+}
+
+#email {
+    width: 422px;
+    height: 24px;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    margin-top: 8px;
+
+}
+
+#senha {
+    width: 422px;
+    height: 24px;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+}
+
+#senha2 {
+    padding-bottom: 8px;
+    margin-top: 16px;
+}
+
+#link_esqueceu_senha {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+
+}
+
+a:visited {
+    color: #000000;
+}
+
+#conteiner_entrar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container-label {
+
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.875rem;
+    color: #000000;
+    font-weight: 400;
+
+    line-height: 1.25rem;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+
+.container-label input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 2px;
+}
+
+.container-label input:checked~.checkmark {
+    background-color: #169b45;
+    border: none;
+}
+
+.checkmark::after {
+    display: none;
+    content: '';
+    position: absolute;
+}
+
+.container-label .checkmark::after {
+    content: '';
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 9px;
+    transform: rotate(45deg);
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+
+}
+
+.container-label input:checked~.checkmark::after {
+    display: block;
+}
+
+body {
+    /*color: brown;*/
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+
+    /* display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: auto; 
+        
+        
+        ESSE CODIGO CENTRALIZA A INTERFACE, OBS: COLOCAR DIV*/
+}
+
+button {
+    background-color: rgb(30, 215, 96);
+    border-radius: 40px;
+    /* width: 100px;  comprimento */
+    /* height: 50px;  altura */
+    border: 0px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 14px 25px;
+    font-size: 0.875rem;
+}
+
+#botao_entrar:hover {
+    padding: 15px 26px;
+}
