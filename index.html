@@ -2,59 +2,111 @@
 <html lang="en">
 
 <head>
-  
+
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>kewyn lindo</title> 
+  <title>kewyn lindo</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
 <body>
-<div id="cabecalho">
-<img id="logo" src="img/logospotify.png"/>
+
+  <script>
 
 
-</div>
+    window.addEventListener('load', function () {
 
-  
+
+      var escondido = true
+
+
+      var button = document.getElementById("mostrar_senha")
+
+      button.textContent = "mostrar"
+      button.onclick = function () {
+        var password = document.getElementById("senha")
+        console.log(password, escondido)
+
+        if (escondido == true) {
+          password.type = ""
+          escondido = false
+          button.textContent = "ocultar"
+        } else {
+          password.type = "password"
+          escondido = true
+          button.textContent = "mostrar"
+        }
+      }
+
+
+      
+      var ENTRAR = document.getElementById("botao_entrar")
+      ENTRAR.onclick = function () {
+        var email = document.getElementById("email")
+        var senha = document.getElementById("senha")
+
+        var dados = "email: " + email.value + "\n" + "senha: " + senha.value
+        
+        alert(dados)
+      }
+    })
+
+  </script>
+
+
+
+  <div id="cabecalho">
+    <img id="logo" src="img/logospotify.png" />
+
+
+  </div>
+
+
 
   <form id="form">
     <!-- essa linguagem é o html -->
     <!-- h: hyper  t: text  m: market  l: language-->
 
-    <div id="informação_faca_login">  Para continuar, faça login no Spotify. </div>
+    <div id="informação_faca_login"> Para continuar, faça login no Spotify. </div>
 
-    <button id="botão_facebook" type="submit"> <img  id= "logo_facebook" src="img/facebook.svg" /> CONTINUAR COM FACEBOOK </button> <br />
-    <button id="botão_apple" type="submit"> <img id="logo_apple" src="img/apple.svg"/> CONTINUAR COM A APPLE</button> <br />
-    <button id="botão_google" type="submit"> <img id="logo_google" src="img/google.svg"/> CONTINUAR COM O GOOGLE</button> <br />
-    <button id="botão_numero_telefone" type="submit"> CONTINUAR COM UM NÚMERO DE TELEFONE</button> <br />
-    
+    <button id="botão_facebook" class="logar" type="submit"> <img id="logo_facebook" src="img/facebook.svg" /> CONTINUAR
+      COM FACEBOOK
+    </button> <br />
+    <button id="botão_apple" class="logar" type="submit"> <img id="logo_apple" src="img/apple.svg" /> CONTINUAR COM A
+      APPLE</button>
+    <br />
+    <button id="botão_google" class="logar" type="submit"> <img id="logo_google" src="img/google.svg" /> CONTINUAR COM O
+      GOOGLE</button> <br />
+    <button id="botão_numero_telefone" class="logar" type="submit"> CONTINUAR COM UM NÚMERO DE TELEFONE</button> <br />
+
 
     Endereço de e-mail ou nome de usuário <br />
 
     <input placeholder="Endereço de e-mail ou nome de usuario" required id="email" type="email" /> <br />
 
-     <div id="senha2">  Senha </div> 
+    <div id="senha2"> Senha </div>
 
-    <input placeholder="Senha" required id="senha"  type="password" /> <br />
+    <input placeholder="Senha" required id="senha" type='password' /> <br />
 
-    <div  id="link_esqueceu_senha">
+    <button id="mostrar_senha"></button>
+
+    <div id="link_esqueceu_senha">
       <a href="https://www.spotify.com/br/password-reset/">Esqueceu sua senha?</a> <br />
     </div>
 
 
-    <div id="conteiner_entrar"> 
-    <label class="container-label">
-      Lembrar de mim
-      <input type="checkbox" checked="checked">
+    <div id="conteiner_entrar">
+      <label class="container-label">
+        Lembrar de mim
+        <input type="checkbox" checked="checked">
 
-      <span class="checkmark"></span>
+        <span class="checkmark"></span>
 
-    </label>
+      </label>
 
-    <button id="botão_entrar" type="submit">ENTRAR</button>
-  </div>
+      <button id="botao_entrar" class="logar" type="submit">ENTRAR</button>
+    </div>
   </form>
 </body>
 

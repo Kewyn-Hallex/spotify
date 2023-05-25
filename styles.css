@@ -275,7 +275,7 @@ body {
         ESSE CODIGO CENTRALIZA A INTERFACE, OBS: COLOCAR DIV*/
 }
 
-button {
+.logar{
     background-color: rgb(30, 215, 96);
     border-radius: 40px;
     /* width: 100px;  comprimento */
